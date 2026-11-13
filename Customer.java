@@ -80,7 +80,6 @@ public class Customer extends User {
         }
     }
 
-    /** Returns the amount typed, or -1 if it was not a number. */
     private double readAmount() {
         System.out.print("Amount: $");
         try {

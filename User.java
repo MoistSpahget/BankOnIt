@@ -1,6 +1,5 @@
 import java.io.Serializable;
 
-/** Base class for anyone who can log in. userName and PIN are saved to disk. */
 public abstract class User implements HasMenu, Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -16,12 +15,10 @@ public abstract class User implements HasMenu, Serializable {
     public String getPIN()      { return PIN; }
     public void setPIN(String PIN) { this.PIN = PIN; }
 
-    /** Checks credentials that were already collected. Case-insensitive on name. */
     public boolean login(String name, String pin) {
         return userName.equalsIgnoreCase(name) && PIN.equals(pin);
     }
 
-    /** Prompts for credentials and checks them. */
     public boolean login() {
         System.out.print("User name: ");
         String name = input.nextLine().trim();
@@ -34,7 +31,6 @@ public abstract class User implements HasMenu, Serializable {
         return ok;
     }
 
-    /** A PIN must be exactly four digits. */
     public static boolean isValidPIN(String pin) {
         return pin.matches("\\d{4}");
     }

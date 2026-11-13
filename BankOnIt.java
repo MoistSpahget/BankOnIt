@@ -1,13 +1,8 @@
 import java.io.*;
 
-/**
- * The application. Holds one Admin and a list of Customers, runs the main menu,
- * and saves/loads customers with object serialization.
- */
 public class BankOnIt implements HasMenu {
 
     private static final String FILE_NAME = "customers.ser";
-    // Set to true for ONE run after changing a serializable class, then set back to false.
     private static final boolean REFRESH_DATA = false;
 
     private Admin admin = new Admin();
@@ -27,7 +22,6 @@ public class BankOnIt implements HasMenu {
         saveCustomers();
     }
 
-    // ---------- main menu ----------
 
     public String menu() {
         System.out.println();
@@ -59,7 +53,6 @@ public class BankOnIt implements HasMenu {
         System.out.println("Thank you for banking with us. Goodbye!");
     }
 
-    // ---------- admin ----------
 
     public void startAdmin() {
         String choice = admin.menu();
@@ -115,8 +108,6 @@ public class BankOnIt implements HasMenu {
         }
     }
 
-    // ---------- customer login ----------
-
     public void customerLogin() {
         System.out.println("Customer login");
         System.out.print("User name: ");
@@ -141,7 +132,6 @@ public class BankOnIt implements HasMenu {
         }
     }
 
-    // ---------- data ----------
 
     public void loadSampleCustomers() {
         customers = new CustomerList();

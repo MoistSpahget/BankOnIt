@@ -1,4 +1,3 @@
-/** The bank administrator. The real admin work happens in BankOnIt.startAdmin(). */
 public class Admin extends User {
     private static final long serialVersionUID = 1L;
 
@@ -19,7 +18,6 @@ public class Admin extends User {
         return input.nextLine().trim();
     }
 
-    /** Intentionally empty: the bank manages admin duties. */
     public void start() {
     }
 

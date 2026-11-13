@@ -5,7 +5,6 @@ public class CheckingAccount implements Serializable {
     private static final long serialVersionUID = 1L;
 
     protected double balance;
-    // EXTENSION: every account keeps a transaction history
     protected ArrayList<String> history = new ArrayList<>();
 
     public CheckingAccount() {
